@@ -1,0 +1,38 @@
+import Ciudades.*
+import Centrales.*
+
+describe "Test"{
+	
+test "A- Burns produce 1 Mkwh en Springfield" {
+
+	assert.equals(1,burns.produccionEnergetica(springfield))
+
+}
+
+test "B- ExBosque produce 18.5 Mkwh en Springfield"{
+	
+	assert.equals(18.5,exBosque.produccionEnergetica(springfield))
+}
+
+test "C- ElSuspiro produce 20 Mkwh en Springfield"{
+	assert.equals(2,elSuspiro.produccionEnergetica(springfield))
+}
+
+test"D- Las centrales contaminantes de Springfield es solo exBosque"{
+	assert.equals([exBosque],springfield.centralesContaminantes())
+}
+
+test"E- Springfield cubrio su necesidad energetica"{
+	assert.that(springfield.cubreNecesidades())
+}
+
+test"F- Si la necesidad energetica de Springfield es 30 esta al horno "{
+	springfield.necesidadEnergetica(30)
+	assert.that(springfield.estaAlHorno())
+}
+
+test"G- Las centrales con mayor produccion ExBosque e Hidroelectrica"{
+	assert.equals([exBosque,hidroelectrica],region.centralesMasProductoras())
+}
+
+}
