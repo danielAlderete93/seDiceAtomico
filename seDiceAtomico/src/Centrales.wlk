@@ -17,20 +17,19 @@ object burns {
 
 object exBosque{
 	var capacidad = 20
-	const tieneContaminacion = true
+	
 	method produccionEnergetica(ciudad){
 		return 0.5+ capacidad * ciudad.riqueza()
 	}
 	
 	method esContaminante(ciudad){
-		return tieneContaminacion
+		return true
 	}
 }
 
 object elSuspiro{
 	var property turbinas = [turbina1]
-	const tieneContaminacion= false
-	
+		
 	method agregarTurbina(turbina){
 		turbinas.add(turbina)
 	}
@@ -38,7 +37,7 @@ object elSuspiro{
 		return turbinas.sum({unaTurbina => unaTurbina.produccionEnergetica(ciudad)})
 	}
 	method esContaminante(ciudad){
-		return tieneContaminacion
+		return false
 	}
 }
 

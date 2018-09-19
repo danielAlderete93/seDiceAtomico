@@ -2,7 +2,7 @@ import Centrales.*
 
 //"Queria comitear algo :)"
 object springfield{
-	var centrales=[elSuspiro,burns,exBosque]
+	var centrales=#{elSuspiro,burns,exBosque}
 	var vientos = 10
 	var riqueza = 0.9
 	var property necesidadEnergetica= 20
