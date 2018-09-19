@@ -1,5 +1,6 @@
 import Centrales.*
 
+//"Queria comitear algo :)"
 object springfield{
 	var centrales=[elSuspiro,burns,exBosque]
 	var vientos = 10
